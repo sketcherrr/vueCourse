@@ -20,4 +20,7 @@ module.exports = {
     "dev": "webpack" //script 节点下的脚本，可以通过 npm run 执行，例如 npm run dev
 }
 ```
-### 3.在终端运行 npm run dev 命令，启动webpack进行项目打包的构建
+### 3.在终端运行 npm run dev 命令，启动webpack进行项目打包的构建,在webpack 4.x 和 5.x 版本中，有如下默认约定：
+- 默认的打包入口文件为 src -> index.js
+- 默认的输出文件路径为 dist -> main.js 
+- 可以在webpack.config.js中修改打包路径
