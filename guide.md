@@ -24,3 +24,18 @@ module.exports = {
 - 默认的打包入口文件为 src -> index.js
 - 默认的输出文件路径为 dist -> main.js 
 - 可以在webpack.config.js中修改打包路径
+### 4.webpack的插件
+#### webpack-dev-server 类似于 node.js 的 nodemon 工具，每当修改了源代码，webpack会自动进行项目的打包和构建,使用如下代码安装（但是其生成的 bundle.js 会储存在内存中。而不是物理硬盘中，一方面方便频繁存储，但是也需要改变读取的路径，在根目录读取）
+```shell
+npm i webpack-dev-server@3.11.2 -D
+```
+- 修改package.json中的命令为
+```json
+  "scripts": {
+    "dev": "webpack serve"
+  }
+```
+- 再次运行 npm run dev 命令，重新进行打包
+- 在浏览器中访问http://localhost:8080端口进行访问
+
+#### html-webpack-plugin 是 webpack 中的 HTML插件（类似于一个模板引擎插件），可以通过此插件自定制 index.html 页面内容,将文件复制到根目录，进行直接访问，但是同样是存储到内存中
