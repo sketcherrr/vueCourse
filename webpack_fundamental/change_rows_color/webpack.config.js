@@ -28,7 +28,17 @@ module.exports = {
     // 配置新节点，令webpack打包完成后自动打开浏览器
     devServer:{
         open: true, // 首次打包完成后，是否自动打开浏览器
-        port: 1234,  // 自定义端口号
+        port: 8080,  // 自定义端口号
         host: '127.0.0.1', //指定运行的地址
+    },
+
+    // 所有第三方文件模块的匹配规则
+    module: {
+        // 文件名的匹配规则
+        rules: [
+            { test: /\.css$/, use: ['style-loader', 'css-loader'] },
+            // 处理 .less 文件的loader
+            { test: /\.less$/, use:['style-loader', 'css-loader', 'less-loader'] }
+        ]
     }
 }

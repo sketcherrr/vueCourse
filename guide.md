@@ -39,3 +39,10 @@ npm i webpack-dev-server@3.11.2 -D
 - 在浏览器中访问http://localhost:8080端口进行访问
 
 #### html-webpack-plugin 是 webpack 中的 HTML插件（类似于一个模板引擎插件），可以通过此插件自定制 index.html 页面内容,将文件复制到根目录，进行直接访问，但是同样是存储到内存中
+## webpack中的loader:实际开发中，webpack默认只能打包处理以 .js 后缀结尾的模块，其他以非 .js 结尾的模块，webpack默认处理不了，需要调用loader加载器才可以正常打包，否则会报错。
+### loader加载器的作用是协助webpack打包处理特定的文件模块：
+- css-loader 可以打包处理 .css 相关的文件
+- less-loader 可以打包处理 .less 相关的文件
+- babel-loader 可以打包处理 webpack 无法处理的高级JS语法
+![](img/loader的调用过程图.jpg)
+![loader调用的过程](./img/loader的调用过程.png)
