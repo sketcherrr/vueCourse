@@ -13,15 +13,15 @@ const htmlPlugin = new HtmlPlugin({
 
 // 注意，左侧的花括号是解构赋值
 // 此插件可以实现每次打包发布时，自动清理之前的打包
-const { CleanWebpackPulgin } = require('clean-webpack-plugin')
+const  {CleanWebpackPlugin}  = require('clean-webpack-plugin')
 
 //  使用Node.js中的语法，向外导出一个 webpack 的配置对象
 module.exports = {
-    mode: 'production',  // mode 用来指定构建模式，可选值有development 和 production
+    mode: 'development',  // mode 用来指定构建模式，可选值有development 和 production
 
     // 在开发调试阶段，建议吧devtool的值设置为 eval-source-map
     // 实际发布时，设置为nosource-source-map或直接关闭source mao
-    devtool: 'nosource-source-map',
+    devtool: 'nosources-source-map',
 
     // 通过 entry 节点指定打包的入口，通过output节点指定打包的出口
     entry:path.join(__dirname,'./src/index.js'),
@@ -31,7 +31,7 @@ module.exports = {
     },
 
     // 将插件进行挂载，在运行webpack时，会加载这些插件
-    plugins:[htmlPlugin, new CleanWebpackPulgin()],
+    plugins:[htmlPlugin, new CleanWebpackPlugin()],
 
     // 配置新节点，令webpack打包完成后自动打开浏览器
     devServer:{
