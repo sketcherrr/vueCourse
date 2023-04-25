@@ -46,3 +46,5 @@ npm i webpack-dev-server@3.11.2 -D
 - babel-loader 可以打包处理 webpack 无法处理的高级JS语法
 ![](img/loader的调用过程图.jpg)
 ![loader调用的过程](./img/loader的调用过程.png)
+## webpack只能打包处理一部分高级的js语法，对于webpack无法处理的js高级语法，需要借助 babel-loader 进行打包处理，并且在 webpack.config.js 中的module.rules下配置好后，还需要在项目根目录下创建一个 babel.config.js 的配置文件
+## Source Map 是一个信息文件，储存着位置信息，也就是混淆压缩后的代码所对应的转换前的位置，这样出错的时候，除错工具件直接显示原始代码，而不是转换后的代码，极大方便开发调试.项目发布时，处于安全考虑，关闭source map，也可以只定位行号，不暴露源码，将devtool的值设置为，nosources-source-map

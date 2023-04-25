@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack serve"
+    "dev": "webpack serve",
+    "bulid": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
@@ -14,11 +15,17 @@
     "jquery": "^3.6.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/plugin-proposal-decorators": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^5.2.6",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.1",
     "less": "^4.1.1",
     "less-loader": "^10.0.1",
     "style-loader": "^3.0.0",
+    "url-loader": "^4.1.1",
     "webpack": "^5.42.1",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^3.11.2"
