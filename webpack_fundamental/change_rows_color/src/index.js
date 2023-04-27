@@ -2,8 +2,12 @@
 import $ from 'jquery'
 // 在webpack中一切皆模块，都可以通过es6导入语法进行导入
 // 如果某个模块中，使用from接受到的成员为undefined，则没必要进行接收
-import './css/index.css'
-import './css/index.less'
+import '@/css/index.css'
+import '@/css/index.less'
+
+
+// 导入 src/js/test/info.js
+import '@/js/test/info'
 
 // 导入图片，得到图片文件
 import logo from '../../../img/logo.jpg'

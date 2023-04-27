@@ -55,5 +55,12 @@ module.exports = {
             // exclude 代表排除项，程序员只关心自己的代码即可，一定要排除node_modules
             { test: /\.js$/, use: 'babel-loader', exclude: /node_modules/ }
         ]
+    },
+
+    resolve: {
+        alias: {
+            // 告诉webpack ，程序员写的代码中， @符号表示 /src 这一层目录
+            '@': path.join(__dirname, './src/')
+        }
     }
 }
