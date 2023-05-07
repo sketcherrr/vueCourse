@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/bootstrap.css">
+</head>
+<body>
+    <!-- 希望vue可以控制此div，把数据填充到div内部 -->
+    <div id="app">
+        {{ username }}
+        <table class="table table-bordered table-hover table-striped">
+            <thead>
+                <th>索引</th>
+                <th>Id</th>
+                <th>姓名</th>
+            </thead>
+            <tbody>
+                <!-- v-for 还有一个可选参数，即当前项的索引，语法格式为 (item,index) in items  -->
+                <!-- 官方建议，只要用到 v-for 指令，那么一定要绑定给一个 :key 属性，而且尽量把 id 作为 key 的值 -->
+                <!-- 官方对key的值是有要求的，只能是字符串或数字类型 -->
+                <!-- key 值不允许重复，否则会终端报错: Duplicate key detected. -->
+                <!-- 不建议使用 index 的值作为key的绑定值，因为它不与数据一一对应的实现绑定，索引不具有唯一性 -->
+                <tr v-for="(item,index) in list" :key="item.id">
+                    <td>{{ index }}</td>
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.name }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 1.导入vue库文件，在window全局有了vue构造函数 -->
+    <script src="./lib/vue-2.6.12.js"></script>
+    <!-- 2.创建vue的实例对象 -->
+    <script>
+        let id = 0
+        // 创建vue的实例对象
+        const vm = new Vue ({
+            // el属性是固定写法，表示点前的vm属性要控制页面上的哪个区域，接收的值是一个选择器
+            el: '#app',
+            // data对象就是要渲染到页面的数据
+            data: {
+                username: 'zhangsan',
+                list:[
+                    { id:id++, name:'张三'},
+                    { id:id++, name:'李四'},
+                    { id:id++, name:'王五'},
+                ]
+            },
+        })
+    </script>
+</body>
+</html>

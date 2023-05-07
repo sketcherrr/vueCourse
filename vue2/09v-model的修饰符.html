@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 希望vue可以控制此div，把数据填充到div内部 -->
+    <div id="app">
+        <input type="text" v-model.number="n1"> + <input type="text" v-model.number="n2"> = <span>{{ n1 + n2 }}</span>
+        <hr>
+        <input type="text" name="" id="" v-model.trim="username">
+        <button @click="showName">获取用户名</button>
+        <hr>
+        <input type="text" v-model.lazy="username">
+    </div>
+
+    <!-- 1.导入vue库文件，在window全局有了vue构造函数 -->
+    <script src="./lib/vue-2.6.12.js"></script>
+    <!-- 2.创建vue的实例对象 -->
+    <script>
+        // 创建vue的实例对象
+        const vm = new Vue ({
+            // el属性是固定写法，表示点前的vm属性要控制页面上的哪个区域，接收的值是一个选择器
+            el: '#app',
+            // data对象就是要渲染到页面的数据
+            data: {
+                username: 'zhangsan',
+                n1: 1,
+                n2: 2,
+            },
+            methods: {
+                showName(){
+                    console.log(`用户名是：‘${this.username}’`);
+                }
+            }
+        })
+    </script>
+</body>
+</html>
