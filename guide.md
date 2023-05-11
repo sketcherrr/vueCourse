@@ -116,7 +116,7 @@ npm i webpack-dev-server@3.11.2 -D
 - 在过滤器函数中，一定要有 ruturn 值
 - 在过滤器的形参中，就可以获取到“管道符”之前待处理的那个值
 - 如果全局过滤器和私有过滤器名字冲突，按照就近原则，调用的是私有过滤器
-#### watch侦听器，允许开发者监视某些数据的变化，从而针对数据的变化做出某些特定的操作
+## watch侦听器，允许开发者监视某些数据的变化，从而针对数据的变化做出某些特定的操作
 ##### 侦听器的格式：
 - 方法格式的侦听器，
   > 缺点一：无法在跟进入页面的时候马上触发一次
@@ -124,13 +124,13 @@ npm i webpack-dev-server@3.11.2 -D
 - 对象格式的侦听器
   > 好处一：通过**immedate**选项，让侦听器自动触发
   > 好处二：可以通过**deep**选项，让侦听器深度监听每个选项的变化
-#### 计算属性：计算属性是指通过一系列运算之后，最终得到一个属性值，这个动态计算出来的属性值可以被模板结 v-bind 构或methods方法使用
+## 计算属性：计算属性是指通过一系列运算之后，最终得到一个属性值，这个动态计算出来的属性值可以被模板结 v-bind 构或methods方法使用
 - 定义的时候，要被定义成方法
 - 在使用的时候，当做普通的属性使用
 - 实现了代码的复用
 - 只要属性中依赖的数据源变化，则计算属性会自动重新求值
-#### axios是一个专注于网络请求的库
-- ![axios 在请求到数据之后，在真正的数据之外，套了一层壳](./vue2/lib/axios%20封装的%206%20个属性.png)
+## axios是一个专注于网络请求的库
+- ![axios 在请求到数据之后，在真正的数据之外，套了一层壳](./img/axios%20封装的%206%20个属性.png)
 - 基本使用：
 - 发起 GET 请求
 ```JavaScript
@@ -146,5 +146,37 @@ npm i webpack-dev-server@3.11.2 -D
       console.log(books);
   })
 ```
-#### vue-cli
-  
+- 发起 POST 请求
+```JavaScript
+const {data} = await axios({
+    method: "POST",
+    url: 'http://www.liulongbin.top:3006/api/getbooks',
+    data: {
+        name: 'zs',
+        age: 20,
+    }
+})
+```
+## vue-cli:
+### 单页面应用：（single page application），一个web网站中只有唯一的一个HTML页面，所有的功能在一个页面上完成
+### vue-cli是vue.js开发的标准工具，它简化了程序员基于webpack创建工程化的vue项目的过程，步骤如下：
+- 在需要创建的目录的终端下运行`vue create *项目名称`
+- 选择自己创建项目![](img/vue-cli的配置1.png)
+- 选择此配置![](img/vue-cli的配置2.png)
+- 选择css预处理器![](img/vue-cli配置3.png)
+- 选择babel与eslint的配置储存在何处(使用单独的配置文件，而不是储存到package.json中)![](img/vue-cli配置4.png)
+### vue 项目中 src 项目的构成
+- 1.assets 文件夹，存放项目中用到的静态资源文件，例如：css样式表，图片资源
+- 2.components 文件夹，程序员封装的、可复用的组件，都要放到 components 目录下
+- 3.main.js是项目的入口文件，整个项目的执行，都要先执行main.js
+- 4.App.vue 是项目的根组件
+### vue 项目的运行流程：通过main.js吧App.vue渲染到index.html的指定该区域中
+### vue组件化开发，vue是一个支持组件化开发的前端框架，组件分为三部分：
+- templata 组件的模板
+- script 组件的JavaScript行为
+- style 组件的样式
+- 组件被封装好后，彼此之前是相互独立的，不存在父子关系
+#### 组件使用的三个步骤：
+- 使用import语法导入需要的组件
+- 使用components节点注册组件
+- 以标签形式使用刚才的组件

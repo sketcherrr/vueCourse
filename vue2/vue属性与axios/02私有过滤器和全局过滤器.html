@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 使用管道符 "|"，调用过滤器函数 -->
+        <p>message的值是： {{message | capitalize}}</p>
+    </div>
+
+    <div id="app2">
+        <p>message的值是：{{message | capitalize}}</p>
+    </div>
+
+    <script src="./lib/vue-2.6.12.js"></script>
+    <script>
+
+        // 全局过滤器，独立于每个vm之外,要定义在vm模型之前,如果
+        // Vue.filter() 方法接收两个参数：
+        // 第一个参数，是全局过滤器的"名字"
+        // 第二个参数，是全局过滤器的处理函数
+        Vue.filter('capitalize', (str)=>{
+            const first =  str.charAt(0).toUpperCase()
+            const other = str.slice(1)
+            return first + other +"~~"
+        })
+
+        const vm = new Vue({
+            el: "#app",
+            data: {
+                message:'hello vue.js',
+            },
+            // 过滤器函数必须被定义到 filters 节点之下
+            filters: {
+                // 此形参中的val，永远都是管道符前面的那个值
+                capitalize(val){
+                    // 字符串有chatAt 方法，这个方法接受索引值，表示从字符串中接受索引值，把对应的字符获取出来
+                    const first = val.charAt(0).toUpperCase()
+                    // 字符串的slice方法可以截取字符串，从指定索引往后截取
+                    const other = val.slice(1)
+                    // 强调：过滤器函数中一定要有一个返回值
+                    return first+other
+                }
+            },
+        })
+
+        // -----------------------------------------------------------------------
+
+        const vm2 = new Vue({
+            el:'#app2',
+            data: {
+                message: 'voyager',
+            },
+            filters: {
+                
+            }
+        })
+
+
+    </script>
+</body>
+</html>
