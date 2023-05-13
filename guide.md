@@ -180,3 +180,5 @@ const {data} = await axios({
 - 使用import语法导入需要的组件
 - 使用components节点注册组件
 - 以标签形式使用刚才的组件
+- 在vue项目的main.js入口文件中，通过Vue.component()，可以注册全局组件
+- props是组件的自定属性，在封装通用组件时，可以提高复用性
