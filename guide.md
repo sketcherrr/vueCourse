@@ -181,4 +181,13 @@ const {data} = await axios({
 - 使用components节点注册组件
 - 以标签形式使用刚才的组件
 - 在vue项目的main.js入口文件中，通过Vue.component()，可以注册全局组件
-- props是组件的自定属性，在封装通用组件时，可以提高复用性
+#### props是组件的自定属性，在封装通用组件时，可以提高复用性
+#### 组件中的样式冲突的问题，默认情况下，.vue组件的样式会全局生效
+#### vue组件的实例对象：创建一个组件的模板后，只有进行调用，才会创建一个组件的实例对象
+#### 组件的生命周期：life cycle 是指一个组件从创建->运行->销毁的整个阶段，强调的是一个时间段-
+- 生命周期函数： 是由vue框架提供的内置函数，会伴随组件的生命周期，自动按次序执行
+- 函数分类：
+- 创建：beforeCreate->created->beforeMount->mounted
+- 运行：beforeUpdate->updated
+- 销毁：bueforeDestory-destoryed
+![生命周期示意图](img/lifecycle.16e4c08e.png)
