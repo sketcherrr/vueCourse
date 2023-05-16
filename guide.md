@@ -190,4 +190,4 @@ const {data} = await axios({
 - 创建：beforeCreate->created->beforeMount->mounted
 - 运行：beforeUpdate->updated
 - 销毁：bueforeDestory-destoryed
-![生命周期示意图](img/lifecycle.16e4c08e.png)
+![vue组件生命周期示意图](img/lifecycle.png)
