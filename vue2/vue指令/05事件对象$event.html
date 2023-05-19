@@ -12,7 +12,7 @@
         <p>count 的值是： {{count}}</p>
         <!-- 如果count是偶数，则按钮背景变红色，否则，取消背景色 -->
         <!-- vue 提供了内置变量 $event ，他就是原生的DOM的时间对象 -->
-        <button @click="add(1,$event)">+N</Nav></button>
+        <button @click="add(1,$event)" id="btn">+N</Nav></button>
     </div>
 
     <!-- 1.导入vue库文件，在window全局有了vue构造函数 -->
@@ -39,7 +39,14 @@
                         e.target.style.backgroundColor = ''
                     }
                 }
-            }
+            },
+            mounted() {
+                if(this.count % 2 == 0) {
+                    document.querySelector('#btn').style.backgroundColor = 'red'
+                }else {
+                    document.querySelector('#btn').style.backgroundColor = ''
+                }
+            },
         })
     </script>
 </body>
