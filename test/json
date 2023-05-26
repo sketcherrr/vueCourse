@@ -1,0 +1,185 @@
+let date_ini = 1688140800000 + 3600000*23
+let data_Sat = []
+let id = 1
+for (let i=0; i<52; i++){
+  // console.log(i);
+  let date = new Date(date_ini + 86400000*7*i).toJSON().slice(0,10)
+  data_Sat.push({id:id++, date: date,stamp:date_ini + 86400000*7*i})
+}
+console.log(data_Sat);
+
+sats = [
+  { id: 1, date: '2023-07-01', stamp: 1688223600000 },
+  { id: 2, date: '2023-07-08', stamp: 1688828400000 },
+  { id: 3, date: '2023-07-15', stamp: 1689433200000 },
+  { id: 4, date: '2023-07-22', stamp: 1690038000000 },
+  { id: 5, date: '2023-07-29', stamp: 1690642800000 },
+  { id: 6, date: '2023-08-05', stamp: 1691247600000 },
+  { id: 7, date: '2023-08-12', stamp: 1691852400000 },
+  { id: 8, date: '2023-08-19', stamp: 1692457200000 },
+  { id: 9, date: '2023-08-26', stamp: 1693062000000 },
+  { id: 10, date: '2023-09-02', stamp: 1693666800000 },
+  { id: 11, date: '2023-09-09', stamp: 1694271600000 },
+  { id: 12, date: '2023-09-16', stamp: 1694876400000 },
+  { id: 13, date: '2023-09-23', stamp: 1695481200000 },
+  // { id: 14, date: '2023-09-30', stamp: 1696086000000 },
+  { id: 15, date: '2023-10-07', stamp: 1696690800000 },
+  { id: 16, date: '2023-10-14', stamp: 1697295600000 },
+  { id: 17, date: '2023-10-21', stamp: 1697900400000 },
+  { id: 18, date: '2023-10-28', stamp: 1698505200000 },
+  { id: 19, date: '2023-11-04', stamp: 1699110000000 },
+  { id: 20, date: '2023-11-11', stamp: 1699714800000 },
+  { id: 21, date: '2023-11-18', stamp: 1700319600000 },
+  { id: 22, date: '2023-11-25', stamp: 1700924400000 },
+  { id: 23, date: '2023-12-02', stamp: 1701529200000 },
+  { id: 24, date: '2023-12-09', stamp: 1702134000000 },
+  { id: 25, date: '2023-12-16', stamp: 1702738800000 },
+  { id: 26, date: '2023-12-23', stamp: 1703343600000 },
+  { id: 27, date: '2023-12-30', stamp: 1703948400000 },
+  { id: 28, date: '2024-01-06', stamp: 1704553200000 },
+  { id: 29, date: '2024-01-13', stamp: 1705158000000 },
+  { id: 30, date: '2024-01-20', stamp: 1705762800000 },
+  { id: 31, date: '2024-01-27', stamp: 1706367600000 },
+  { id: 32, date: '2024-02-03', stamp: 1706972400000 },
+  // { id: 33, date: '2024-02-10', stamp: 1707577200000 },
+  { id: 34, date: '2024-02-17', stamp: 1708182000000 },
+  { id: 35, date: '2024-02-24', stamp: 1708786800000 },
+  { id: 36, date: '2024-03-02', stamp: 1709391600000 },
+  { id: 37, date: '2024-03-09', stamp: 1709996400000 },
+  { id: 38, date: '2024-03-16', stamp: 1710601200000 },
+  { id: 39, date: '2024-03-23', stamp: 1711206000000 },
+  { id: 40, date: '2024-03-30', stamp: 1711810800000 },
+  { id: 41, date: '2024-04-06', stamp: 1712415600000 },
+  { id: 42, date: '2024-04-13', stamp: 1713020400000 },
+  { id: 43, date: '2024-04-20', stamp: 1713625200000 },
+  { id: 44, date: '2024-04-27', stamp: 1714230000000 },
+  { id: 45, date: '2024-05-04', stamp: 1714834800000 },
+  { id: 46, date: '2024-05-11', stamp: 1715439600000 },
+  { id: 47, date: '2024-05-18', stamp: 1716044400000 },
+  { id: 48, date: '2024-05-25', stamp: 1716649200000 },
+  { id: 49, date: '2024-06-01', stamp: 1717254000000 },
+  { id: 50, date: '2024-06-08', stamp: 1717858800000 },
+  { id: 51, date: '2024-06-15', stamp: 1718463600000 },
+  { id: 52, date: '2024-06-22', stamp: 1719068400000 }
+]
+
+let id2 = 1
+const satur = []
+for (let a of sats) {
+  satur.push({"id": id2++ ,"label":a.date,value:a.stamp})
+}
+console.log(satur);
+
+[
+  { id: 1, label: '2023-07-01', value: 1688194800000 },
+  { id: 2, label: '2023-07-08', value: 1688799600000 },
+  { id: 3, label: '2023-07-15', value: 1689404400000 },
+  { id: 4, label: '2023-07-22', value: 1690009200000 },
+  { id: 5, label: '2023-07-29', value: 1690614000000 },
+  { id: 6, label: '2023-08-05', value: 1691218800000 },
+  { id: 7, label: '2023-08-12', value: 1691823600000 },
+  { id: 8, label: '2023-08-19', value: 1692428400000 },
+  { id: 9, label: '2023-08-26', value: 1693033200000 },
+  { id: 10, label: '2023-09-02', value: 1693638000000 },
+  { id: 11, label: '2023-09-09', value: 1694242800000 },
+  { id: 12, label: '2023-09-16', value: 1694847600000 },
+  { id: 13, label: '2023-09-23', value: 1695452400000 },
+  { id: 14, label: '2023-10-07', value: 1696662000000 },
+  { id: 15, label: '2023-10-14', value: 1697266800000 },
+  { id: 16, label: '2023-10-21', value: 1697871600000 },
+  { id: 17, label: '2023-10-28', value: 1698476400000 },
+  { id: 18, label: '2023-11-04', value: 1699081200000 },
+  { id: 19, label: '2023-11-11', value: 1699686000000 },
+  { id: 20, label: '2023-11-18', value: 1700290800000 },
+  { id: 21, label: '2023-11-25', value: 1700895600000 },
+  { id: 22, label: '2023-12-02', value: 1701500400000 },
+  { id: 23, label: '2023-12-09', value: 1702105200000 },
+  { id: 24, label: '2023-12-16', value: 1702710000000 },
+  { id: 25, label: '2023-12-23', value: 1703314800000 },
+  { id: 26, label: '2023-12-30', value: 1703919600000 },
+  { id: 27, label: '2024-01-06', value: 1704524400000 },
+  { id: 28, label: '2024-01-13', value: 1705129200000 },
+  { id: 29, label: '2024-01-20', value: 1705734000000 },
+  { id: 30, label: '2024-01-27', value: 1706338800000 },
+  { id: 31, label: '2024-02-03', value: 1706943600000 },
+  { id: 32, label: '2024-02-17', value: 1708153200000 },
+  { id: 33, label: '2024-02-24', value: 1708758000000 },
+  { id: 34, label: '2024-03-02', value: 1709362800000 },
+  { id: 35, label: '2024-03-09', value: 1709967600000 },
+  { id: 36, label: '2024-03-16', value: 1710572400000 },
+  { id: 37, label: '2024-03-23', value: 1711177200000 },
+  { id: 38, label: '2024-03-30', value: 1711782000000 },
+  { id: 39, label: '2024-04-06', value: 1712386800000 },
+  { id: 40, label: '2024-04-13', value: 1712991600000 },
+  { id: 41, label: '2024-04-20', value: 1713596400000 },
+  { id: 42, label: '2024-04-27', value: 1714201200000 },
+  { id: 43, label: '2024-05-04', value: 1714806000000 },
+  { id: 44, label: '2024-05-11', value: 1715410800000 },
+  { id: 45, label: '2024-05-18', value: 1716015600000 },
+  { id: 46, label: '2024-05-25', value: 1716620400000 },
+  { id: 47, label: '2024-06-01', value: 1717225200000 },
+  { id: 48, label: '2024-06-08', value: 1717830000000 },
+  { id: 49, label: '2024-06-15', value: 1718434800000 },
+  { id: 50, label: '2024-06-22', value: 1719039600000 }
+]
+
+
+let id3 = 1
+stack = []
+for(let a of sats){
+  stack.push({id:id3++,name:'未报名',date: a.date.slice(5,10),stamp:a.stamp,is_permit:false,member:'未报名',brief_intro:'未报名',cv:'未报名'})
+}
+console.log(stack);
+
+[
+  { id: 1, name: '未报名', date: '07-01', is_permit: false },
+  { id: 2, name: '未报名', date: '07-08', is_permit: false },
+  { id: 3, name: '未报名', date: '07-15', is_permit: false },
+  { id: 4, name: '未报名', date: '07-22', is_permit: false },
+  { id: 5, name: '未报名', date: '07-29', is_permit: false },
+  { id: 6, name: '未报名', date: '08-05', is_permit: false },
+  { id: 7, name: '未报名', date: '08-12', is_permit: false },
+  { id: 8, name: '未报名', date: '08-19', is_permit: false },
+  { id: 9, name: '未报名', date: '08-26', is_permit: false },
+  { id: 10, name: '未报名', date: '09-02', is_permit: false },
+  { id: 11, name: '未报名', date: '09-09', is_permit: false },
+  { id: 12, name: '未报名', date: '09-16', is_permit: false },
+  { id: 13, name: '未报名', date: '09-23', is_permit: false },
+  { id: 14, name: '未报名', date: '10-07', is_permit: false },
+  { id: 15, name: '未报名', date: '10-14', is_permit: false },
+  { id: 16, name: '未报名', date: '10-21', is_permit: false },
+  { id: 17, name: '未报名', date: '10-28', is_permit: false },
+  { id: 18, name: '未报名', date: '11-04', is_permit: false },
+  { id: 19, name: '未报名', date: '11-11', is_permit: false },
+  { id: 20, name: '未报名', date: '11-18', is_permit: false },
+  { id: 21, name: '未报名', date: '11-25', is_permit: false },
+  { id: 22, name: '未报名', date: '12-02', is_permit: false },
+  { id: 23, name: '未报名', date: '12-09', is_permit: false },
+  { id: 24, name: '未报名', date: '12-16', is_permit: false },
+  { id: 25, name: '未报名', date: '12-23', is_permit: false },
+  { id: 26, name: '未报名', date: '12-30', is_permit: false },
+  { id: 27, name: '未报名', date: '01-06', is_permit: false },
+  { id: 28, name: '未报名', date: '01-13', is_permit: false },
+  { id: 29, name: '未报名', date: '01-20', is_permit: false },
+  { id: 30, name: '未报名', date: '01-27', is_permit: false },
+  { id: 31, name: '未报名', date: '02-03', is_permit: false },
+  { id: 32, name: '未报名', date: '02-17', is_permit: false },
+  { id: 33, name: '未报名', date: '02-24', is_permit: false },
+  { id: 34, name: '未报名', date: '03-02', is_permit: false },
+  { id: 35, name: '未报名', date: '03-09', is_permit: false },
+  { id: 36, name: '未报名', date: '03-16', is_permit: false },
+  { id: 37, name: '未报名', date: '03-23', is_permit: false },
+  { id: 38, name: '未报名', date: '03-30', is_permit: false },
+  { id: 39, name: '未报名', date: '04-06', is_permit: false },
+  { id: 40, name: '未报名', date: '04-13', is_permit: false },
+  { id: 41, name: '未报名', date: '04-20', is_permit: false },
+  { id: 42, name: '未报名', date: '04-27', is_permit: false },
+  { id: 43, name: '未报名', date: '05-04', is_permit: false },
+  { id: 44, name: '未报名', date: '05-11', is_permit: false },
+  { id: 45, name: '未报名', date: '05-18', is_permit: false },
+  { id: 46, name: '未报名', date: '05-25', is_permit: false },
+  { id: 47, name: '未报名', date: '06-01', is_permit: false },
+  { id: 48, name: '未报名', date: '06-08', is_permit: false },
+  { id: 49, name: '未报名', date: '06-15', is_permit: false },
+  { id: 50, name: '未报名', date: '06-22', is_permit: false }
+]
