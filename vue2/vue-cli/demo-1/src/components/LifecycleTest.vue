@@ -38,7 +38,7 @@ export default {
         // this.show()
     },
     // 组件的props，data，methods已创建好，都处于可用状态，但组建的模板尚未生成，可以发起Ajax请求拿数据
-    // created 生命周期函数飞铲更重要，我们经常调用methods方法，请求服务器，并且把请求到的方法，转存到data中，供template模板的渲染时使用
+    // created 生命周期函数非常重要，我们经常调用methods方法，请求服务器，并且把请求到的方法，转存到data中，供template模板的渲染时使用
     created() {
         console.log(this.info);
         console.log(this.message);
