@@ -23,15 +23,42 @@
 
 
 
-import os
+# import os
+# import openai
+# openai.api_key = os.getenv("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")
+
+# completion = openai.ChatCompletion.create(
+#   model="gpt-3.5-turbo",
+#   messages=[
+#     {"role": "user", "content": "Hello!"}
+#   ]
+# )
+
+# print(completion.choices[0].message)
+
+
 import openai
-openai.api_key = os.getenv("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")
 
-completion = openai.ChatCompletion.create(
-  model="gpt-3.5-turbo",
-  messages=[
-    {"role": "user", "content": "Hello!"}
-  ]
-)
+# 填你的秘钥
+openai.api_key = "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"
 
-print(completion.choices[0].message)
+# 提问代码
+def chat_gpt(prompt):
+    # 你的问题
+    prompt = prompt
+    
+    # 调用 ChatGPT 接口
+    model_engine = "text-davinci-003"
+    completion = openai.Completion.create(
+        engine=model_engine,
+        prompt=prompt,
+        max_tokens=1024,
+        n=1,
+        stop=None,
+        temperature=0.5,
+    )
+
+    response = completion.choices[0].text
+    print(response)
+if __name__ == "__main__":
+    chat_gpt("hello")
