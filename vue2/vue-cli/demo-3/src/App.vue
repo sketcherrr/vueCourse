@@ -42,7 +42,7 @@ export default {
       // 点击按钮展示输入框
       this.inputVisible = true
       // 让展示出来的文本框自动获得焦点
-      // this.$nextTick会把cb回调函数推迟到下一个DOM更新周期之后执行，也就是会等DOM渲染完成后，再执行其回调函数，保证回调函数可以操作到最新的DOM元素
+      // this.$nextTick(cb)会把cb回调函数推迟到下一个DOM更新周期之后执行，也就是会等DOM渲染完成后，再执行其回调函数，保证回调函数可以操作到最新的DOM元素
       this.$nextTick(()=>{
         this.$refs.iptRef.focus()
       })

@@ -12,15 +12,15 @@
 
         // forEach循环不能被中止
         arr.forEach((item,index)=> {
-            console.log('ok');
-            if(item === 'david') {
+            console.log('ok1');
+            if(item === 'jane') {
                 console.log(index);
             }
         })
 
         // 从数组里找元素用some比较合适
         arr.some((item,index)=> {
-            console.log('ok');
+            console.log('ok2');
             if(item === 'jane') {
                 console.log(index);
                 // 在找到某个对应的项之后，可以通过 return true 固定写法终止循环

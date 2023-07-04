@@ -22,7 +22,7 @@
         // })
         // console.log(amt);
 
-        // arr.filter(item=>item.state).reduce((累加的结果，当前循环项)=>{})
+        // arr.filter(item=>item.state).reduce((累加的结果，当前循环项)=>{}，初始值)
         const result = arr.filter( item => item.state).reduce((amt,item)=> {
             return amt += item.price*item.count
         },0)
