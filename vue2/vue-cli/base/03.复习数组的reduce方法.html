@@ -27,6 +27,7 @@
             return amt += item.price*item.count
         },0)
         console.log(result);
+        const results = arr.filter( item => item.state).reduce((amt,item)=> amt += item.price*item.count, 0)
     </script>
 </body>
 </html>
